@@ -1,0 +1,98 @@
+.main{
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main::before{
+  content: "";
+  position: absolute;
+  background: url(../assets/trianglify-lowres.png) no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(90deg);
+  width: 100vh;
+  height: 100vw;
+  top: 19%;
+  right: -30%;
+  z-index: -1;
+}
+
+.app{
+  border: 5px solid purple;
+  border-radius: 20px;
+  background: white;
+  width: 80%;
+  height: 60%;
+  margin: 20vh 0 0 10vw;
+  box-shadow: 10px 10px 20px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-panel{
+  width: 90%;
+  margin-left: 2%;
+  text-align: center;
+  color: purple;
+  font-weight: 300;
+}
+
+.input-panel{
+  display: flex;
+  justify-content: space-between;
+}
+
+input{
+  border: 2px solid pink;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  color: purple;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+button{
+  border-radius: 20px;
+  background: linear-gradient();
+  color: white;
+  font-weight: 500;
+  background: rgb(255,46,203);
+  background: linear-gradient(45deg, rgba(255,46,203,1) 0%, rgba(144,9,126,1) 91%);
+  width: 120px;
+  height: 47px;
+  border: 2px solid black;
+  font-size: 18px;
+  text-shadow: 0 0 1px black;
+}
+
+.info{
+  border: 1px solid black;
+  text-align: center;
+  text-shadow: 0 0 1px black;
+}
+
+.guessed{
+  color: green;
+}
+
+.notguessed{
+  color: red;
+}
+
+@media (orientation: landscape){
+  .main::before{
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .input-panel{
+    justify-content: space-around;
+  }
+}
